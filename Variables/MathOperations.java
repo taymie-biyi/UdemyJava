@@ -17,8 +17,8 @@ public class MathOperations {
         System.out.println("The Andromeda Galaxy has " + (starsInAndromeda - starsInMilkyWay) + " more stars than the Milky Way");
         System.out.println("Snape ended up removing marks. Ron actually scored " + (testScores - bonusMarks) + " on his potions test");
 
-
-
+        System.out.println("Fred and George used a special spell to multiply their sweets to: " + (bagOfSweets1*bagOfSweets2));
+        System.out.println("Snape made an error on his excel, accidentally multiplying Ron's score to: " + (testScores*bonusMarks) + "/10");
 
     }
 }
