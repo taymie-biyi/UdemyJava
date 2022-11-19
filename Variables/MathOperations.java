@@ -20,5 +20,9 @@ public class MathOperations {
         System.out.println("Fred and George used a special spell to multiply their sweets to: " + (bagOfSweets1*bagOfSweets2));
         System.out.println("Snape made an error on his excel, accidentally multiplying Ron's score to: " + (testScores*bonusMarks) + "/10");
 
+        System.out.println("Originally, Fred had " + (bagOfSweets2/bagOfSweets1) +" times more sweets than George");
+        System.out.println("Andromeda has " + (starsInAndromeda/starsInMilkyWay) + " times more stars");
+        System.out.println("Snape caught the error. Furious, he divided Ron's score to: " + (testScores/bonusMarks));
+
     }
 }
