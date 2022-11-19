@@ -13,5 +13,12 @@ public class MathOperations {
         System.out.println("There are " + (starsInMilkyWay + starsInAndromeda) + " stars in the Milky Way and Andromeda galaxies.");
         System.out.println("With bonus marks, Ron scored " + (testScores + bonusMarks) + "/10 on his potions test. Snape wasn't too thrilled");
 
+        System.out.println("Fred has  " + (bagOfSweets2 - bagOfSweets1) + " more sweets than George");
+        System.out.println("The Andromeda Galaxy has " + (starsInAndromeda - starsInMilkyWay) + " more stars than the Milky Way");
+        System.out.println("Snape ended up removing marks. Ron actually scored " + (testScores - bonusMarks) + " on his potions test");
+
+
+
+
     }
 }
