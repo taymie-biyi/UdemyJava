@@ -47,10 +47,21 @@ public class MathOperations {
         System.out.println("I count: " + counter);
 
         // The 'minus one' operator, '--'
+        
         counter--;
         counter--;
         counter--;
         counter--;
         System.out.println("I count: " + counter);
+
+        // The 'add by' operator, '+='
+
+        int passengers = 0;
+        passengers += 9;
+        System.out.println("I count: " + passengers);
+
+        //The 'subtract by' operator, '-='
+        passengers -= 5;
+        System.out.println("Some passengers got off at the next bus stop, now, there are " + passengers + " remaining in the bus.");
     }
 }
