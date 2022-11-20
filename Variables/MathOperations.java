@@ -42,6 +42,15 @@ public class MathOperations {
         int counter = 0;
         counter++;
         counter++;
+        counter++;
+        counter++;
+        System.out.println("I count: " + counter);
+
+        // The 'minus one' operator, '--'
+        counter--;
+        counter--;
+        counter--;
+        counter--;
         System.out.println("I count: " + counter);
     }
 }
