@@ -32,12 +32,12 @@ public class MathOperations {
         System.out.println("Andromeda has " + (starsInAndromeda/starsInMilkyWay) + " times more stars");
         System.out.println("Snape caught the error. Furious, he divided Ron's score to: " + (testScores/bonusMarks));
 
-        // The modulus operator '%'
+        // The modulus operator '%' - returns the remainder of a division
 
         System.out.println("10 is an even number, since dividing 10 by 2 has a remainder of: " + (10 % 2));
         System.out.println("5 is an odd number, since dividing 5 by 2 has a remainder of: " + (5 % 2));
 
-        //The 'add one' operator, '++'
+        //The 'add one' operator, '++' - increases the value by 1
 
         int counter = 0;
         counter++;
@@ -46,7 +46,7 @@ public class MathOperations {
         counter++;
         System.out.println("I count: " + counter);
 
-        // The 'minus one' operator, '--'
+        // The 'minus one' operator, '--' - decreases the value by 1
         
         counter--;
         counter--;
@@ -54,13 +54,13 @@ public class MathOperations {
         counter--;
         System.out.println("I count: " + counter);
 
-        // The 'add by' operator, '+='
+        // The 'add by' operator, '+=' - increases the value by the number on the right
 
         int passengers = 0;
         passengers += 9;
         System.out.println("I count: " + passengers);
 
-        //The 'subtract by' operator, '-='
+        //The 'subtract by' operator, '-=' - decreases the value by the number on the right
         passengers -= 5;
         System.out.println("Some passengers got off at the next bus stop, now, there are " + passengers + " remaining in the bus.");
     }
