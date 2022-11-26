@@ -2,14 +2,14 @@ public class IfElse {
     public static void main(String[] args) {
         int grade = 65;
 
-        // If - Else Statement
+        // If - Else Statement (comparing two statements)
         if (grade > 65) {
             System.out.println("Great job, you passed!");
         } else {
             System.out.println("Better luck next time!");
         }
 
-        //If - Else If - Else statement
+        //If - Else If - Else statement (comparing 3 0r more conditions)
         if (grade >= 85) {
             System.out.println("Excellent! You got an A+.");
         } else if (grade >= 80) {
