@@ -3,8 +3,11 @@ public class Tip {
     public static void main(String[] args) {
         double bill = 53.5;
         System.out.println("Waiter: I hope you enjoyed your meal!");
+
+        tipThewaiter(bill);
+ 
         System.out.println("Thank you!");
-    
+
         //Task 2: Call a function that tips the waiter.
     }
 
@@ -12,7 +15,10 @@ public class Tip {
 
     
     //Task 1: Make a function here. See the doc comment for details.  
-
+    public static void tipThewaiter(double bill) {
+        double tip = (0.15 * bill);
+        System.out.println("Your service was wonderful! Please, accept this tip: " + tip);
+    }
     /**
      * Function name: tipTheWaiter - calculates a tip and prints it.
      * @param bill (double).
