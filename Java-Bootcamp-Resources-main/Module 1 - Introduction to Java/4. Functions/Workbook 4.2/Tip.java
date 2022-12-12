@@ -10,9 +10,6 @@ public class Tip {
 
         //Task 2: Call a function that tips the waiter.
     }
-
-
-
     
     //Task 1: Make a function here. See the doc comment for details.  
     public static void tipThewaiter(double bill) {
