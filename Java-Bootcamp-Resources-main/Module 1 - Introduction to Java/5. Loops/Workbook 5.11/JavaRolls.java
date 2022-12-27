@@ -8,6 +8,8 @@ public class JavaRolls {
               1. print: Let's play Rolling Java. Type anything to start.
               2. Get the user to enter any value
         */
+        System.out.println("Let's play Rolling Java. Type anything to start.");
+          scan.nextLine();
 
         /* Task 2: 
               1. Once the user is ready, print: 
@@ -18,19 +20,17 @@ public class JavaRolls {
                     You must collect at least 3 points to win. Enter anything to roll:
               2. Get the user to enter any value
         */
-
-       int score = 0;
+        System.out.println("Great, here are the rules: \n\t - If you roll a 6 the game stops. \n\t- If you roll a 4 nothing happens. \n\t- Otherwise, you get 1 point.\n\t You must collect at least 3 points to win. \nEnter anything to roll:");
+          int score = 0;
       
        /* 
          Task 3
           1. Make a while loop that runs forever
           2. During each run, get them to enter a random value
           
-          
           Task 5
            1. During each run, call the rollDice() function.
            2. Print each dice roll like so: You rolled a <diceRoll>.           
-           
           
           Task 6
             If the user rolls a 6:
@@ -46,7 +46,21 @@ public class JavaRolls {
 
        */
 
-      
+      while (true) {
+        scan.nextLine();
+        int diceRoll = rollDice();
+        System.out.println("You rolled a " + diceRoll);
+        if (diceRoll == 6){
+          System.out.println("End of game.");
+          break;
+        } else if (diceRoll == 4) {
+          System.out.println("Zero Points. Keep rolling");
+        } else {
+          System.out.println("One Point! Keep rolling.");
+          score++;
+        }
+      }
+
       /* Task 7
       
            1.  After the game ends, check the user's points.
@@ -58,7 +72,12 @@ public class JavaRolls {
               Otherwise, print:
                   Tough luck, you lose :( 
       */
-
+      System.out.println("\nYour score is: " + score);
+      if (score >= 3) {
+        System.out.println("Wow, that's lucky. You win!");
+      } else {
+        System.out.println("Tough luck, you lose");
+      }
     }
   
   
@@ -67,6 +86,9 @@ public class JavaRolls {
      * @return randomNumber (int)
      * 
      */ 
-  
+    public static int rollDice() {
+      int randomNumber = (int) (Math.random()*6 +1);
+      return randomNumber;
+    }
   
 }
