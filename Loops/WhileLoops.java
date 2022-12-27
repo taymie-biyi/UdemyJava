@@ -11,7 +11,7 @@ public class WhileLoops {
             System.out.println("You lose. My number was " + compNum + ", but you chose " + yourNum);
             System.out.println("You lost. Let's play again! \n Pick a number");
             yourNum = scan.nextInt();
-        } 
+        }
         System.out.println("Your Number: " + yourNum + " My number : " + compNum);
     }
 }
