@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class BlackJack {
+    public static Scanner scan = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
         System.out.println("Welcome to Java Casino");
         System.out.println("Do you have a knack for Black Jack?");
         System.out.println("We shall see...\n..Ready? Press anything to begin!");
@@ -18,10 +18,8 @@ public class BlackJack {
         int dealerHandValue = Math.min(dealerCard1,10) + Math.min(dealerCard2,10);
         System.out.println("\nThe dealer shows \n" + drawRandomCard(dealerCard1) + "\n and has a card facing down \n" + faceDown());
         System.out.println("The dealer's total is hidden");
-        System.out.println("Do you want to hit or stay?");
-        String choice = scan.nextLine();    
-        while (choice.equals("hit") || choice.equals("stay")) {
-            while (choice.equals("hit")){
+        String choice = hitOrStay();
+            while (choice.equalsIgnoreCase("hit")){
                 draw1 = randomCard();
                 System.out.println("You get a\n" + drawRandomCard(draw1));
                 handValue += (Math.min(draw1,10));
@@ -32,36 +30,39 @@ public class BlackJack {
                 System.out.println("Do you want to hit or stay?");
                 choice = scan.nextLine();
             } 
-            while (choice.equals("stay")) {
+            while (choice.equalsIgnoreCase("stay")) {
                 System.out.println("\nThe dealer shows \n" + drawRandomCard(dealerCard1) + "\n and has a \n" + drawRandomCard(dealerCard2));
                 System.out.println("The dealer's hand value is : " + dealerHandValue);
-                for (int i = dealerHandValue; i < 17; i += Math.min(dealerCard1,10)){
+                for (int i = dealerHandValue; i < 17; i = dealerHandValue += Math.min(dealerCard1,10)){
                     dealerCard1 = randomCard();
                     System.out.println("Dealer's turn!");
                     System.out.println("\nThe dealer shows \n" + drawRandomCard(dealerCard1));
                     System.out.println("The dealer's hand value is : " + dealerHandValue);
                 }
+                System.out.println("\nThe dealer shows \n" + drawRandomCard(dealerCard1));
                 System.out.println("Dealer stays");
                     break;
             }
             if (((handValue > dealerHandValue) || (dealerHandValue >= 21)) && (handValue < 21)){
                 System.out.println("You win, dealer lost");
                 System.out.println("Your hand value: " + handValue + "\n Dealer's hand value: " + dealerHandValue);
-                break;
             } else if ((dealerHandValue > handValue) || (handValue >= 21) && (dealerHandValue < 21)){
                 System.out.println("You lost, dealer wins");
                 System.out.println("Your hand value: " + handValue + "\nDealer's hand value: " + dealerHandValue);
-                break;
             }
-            System.out.println("Your turn!");  
-            System.out.println("Do you want to hit or stay or done?");
-            choice = scan.nextLine(); 
-            if (choice.equals("done")) {
-                System.out.println("Thank you for playing!!");
-                break;
-            }
-        }
+            scan.close();
     }
+    public static String hitOrStay() {
+        System.out.println("Do you want to hit or stay?");
+        String choice = scan.nextLine();
+        while (!((choice.equalsIgnoreCase("stay")) || (choice.equalsIgnoreCase("hit")))) {
+            System.out.println("Please write hit or stay");
+            choice = scan.nextLine();
+            scan.close();
+        }
+        return choice;
+    }
+    
     public static int randomCard() {
         int randomCard =(int) (Math.random()*13 +1);
         return (randomCard);
@@ -199,6 +200,8 @@ public class BlackJack {
                 default:
                 return ("Invalid entry");
             }
-    
     }
+    scan.close();
+
 }
+
