@@ -201,7 +201,5 @@ public class BlackJack {
                 return ("Invalid entry");
             }
     }
-    scan.close();
-
 }
 
