@@ -10,24 +10,23 @@ public class Prices {
             {8.99, 7.99, 9.49, 9.99, 10.99}
         };
         // Task 3 - Print the prices for each department. See the article for the expected output.  
-        System.out.print("Baking: " );
-        for (int i = 0; i < prices[0].length; i++){
-            System.out.print(prices[0][i] + " ");
+        for (int i = 0; i < prices.length; i++){
+            switch (i) {
+                case 0:
+                System.out.print("Baking: " );
+                    break;
+                case 1:
+                System.out.print("Beverage: " );
+                    break;
+                case 2:
+                System.out.print("Cereals: " );
+                    break;
+            }
+            for (int j = 0; j < prices[i].length; j++){
+                System.out.print(prices[i][j] + " ");
+            }
+            System.out.print("\n");
         }
-        System.out.print("\n");
-
-        System.out.print("Beverage: " );
-        for (int i = 0; i < prices[1].length; i++){
-            System.out.print(prices[1][i] + " ");
-        }
-        System.out.print("\n");
-
-        System.out.print("Cereals: " );
-        for (int i = 0; i < prices[2].length; i++){
-            System.out.print(prices[2][i] + " ");
-        }
-        System.out.print("\n");
-
     }
 
 }
